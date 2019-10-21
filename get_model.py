@@ -25,7 +25,8 @@ weights_path = get_file(weights_file, TF_WEIGHTS_PATH, md5_hash=md5_hash,
 model.load_weights(weights_path)
 ##model.ddsummay()
 #print_summary(model)
-plot_model(model , to_file="model2.png" ,show_shapes=True, show_layer_names=True , rankdir='TB')
+#plot_model(model , to_file="model2.png" ,show_shapes=True, show_layer_names=True , rankdir='TB')
+model.save("dluvison.h5")
 import tensorflow as tf
 from posereg.activations import channel_softmax_2d
 _channel_softmax_2d = channel_softmax_2d()
